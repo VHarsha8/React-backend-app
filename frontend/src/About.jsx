@@ -9,7 +9,7 @@ function About(){
                 <h1 className="text-lg font-medium text-center text-gray-700 font-poppins md:text-xl">Join us on <div className="inline-flex items-center text-xl font-semibold text-green-600 font-poppins">September 28 2024</div>  and be a part of this celebration of talent and knowledge!</h1>
 
             </div>
-            <h1 className="text-xs text-center text-gray-400 md:text-sm">Photograph clicked from Epistemicon-2023</h1>
+            <h1 className="text-center text-gray-400 text-md md:text-sm">Photograph clicked from Epistemicon-2023</h1>
             
         </div>
     );
