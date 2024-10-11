@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ExampleComponent from './MuiComponent';
-import About from './About';
 import TiltCard from './TiltCard';
 
 function App() {
