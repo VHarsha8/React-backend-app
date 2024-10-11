@@ -3,10 +3,11 @@
     "react-router-dom": "^6.26.2",
     "react-tilt": "^1.0.2"
   },
-  "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
-  },
   "scripts": {
     "build": "react-scripts build"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-private-property-in-object": "^7.25.8",
+    "nodemon": "^3.1.7"
   }
 }

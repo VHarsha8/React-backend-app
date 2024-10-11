@@ -12,32 +12,33 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Serve static files from the React app's build directory
-const buildPath = path.join(__dirname, "../frontend/build");
+const buildPath = path.join(__dirname, '../frontend/build');
 
 // Middleware to serve static files
 const staticMiddleware = serveStatic(buildPath);
+app.use(staticMiddleware);
 
 // Forward unmatched routes to React's index.html
 const serveReactApp = (req, res) => {
-    res.sendFile(path.join(buildPath, "index.html"));
+  res.sendFile(path.join(buildPath, 'index.html'));
 };
 
-// Handle GET requests for the API
+// API route example
 app.get('/api', (req, res) => {
-    res.send('API is working!');
+  res.send('API is working!');
 });
 
-// Handle all other GET requests
+// Handle all other GET requests by serving React app
 app.get('*', (req, res) => {
-    staticMiddleware(req, res, () => serveReactApp(req, res));
+  serveReactApp(req, res);
 });
 
-// Handle other HTTP methods
+// Handle unsupported HTTP methods
 app.use((req, res) => {
-    res.status(405).json({ message: 'Method Not Allowed' });
+  res.status(405).json({ message: 'Method Not Allowed' });
 });
 
 // Start the server
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
