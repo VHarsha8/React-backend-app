@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.char {
+  transform: translateY(115px);
+  transition: transform .5s;
+}
+
+
+.clip-path-polygon {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+
+body {
+    @apply bg-pearl; /* Replace 'twitter' with your desired Tailwind color */
+  }  
+
+
+
+@font-face {
+  font-family: 'AmericanCaptain-MdEY';
+  src: url('./fonts/AmericanCaptain-MdEY.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'WallingtonRegular-PYK7';
+  src: url('./fonts/WallingtonRegular-PYK7.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Dubiel';
+  src: url('./fonts/Dubiel.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'DubielItalic';
+  src: url('./fonts/DubielItalic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'MarvelRegular-Dj83';
+  src: url('./fonts/MarvelRegular-Dj83.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Vogue';
+  src: url('./fonts/Vogue.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'AmericanCaptainPatrius';
+  src: url('./fonts/AmericanCaptainPatrius.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'goodtimes';
+  src: url('./fonts/goodtimes.otf') format('opentype');
+}
+
+
+
+.poster{
+  background-image: "./Poster.jpg";
+  width: fit-content;
+}
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(50%);
+  }
+  
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 10s linear infinite;
+}
