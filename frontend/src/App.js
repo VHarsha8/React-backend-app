@@ -9,7 +9,6 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<ExampleComponent />} />
-        <Route path="/about" element={<About />} />
         <Route path="/TiltCard" element={<TiltCard />} />
       </Routes>
     </Router>
